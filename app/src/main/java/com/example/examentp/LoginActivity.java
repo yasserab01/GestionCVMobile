@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = passwordEditText.getText().toString();
 
         // Assuming these are the correct credentials
-        if (username.equals("test") && password.equals("test")) {
+        if (username.equals("") && password.equals("")) {
             // Login is successful
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
