@@ -9,36 +9,86 @@
     android:padding="16dp"
     tools:context=".AddStudentActivity">
 
-    <EditText
-        android:id="@+id/etNom"
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter un étudiant"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Nom -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nom" />
+        android:hint="Nom">
 
-    <EditText
-        android:id="@+id/etPrenom"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Prénom -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPrenom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Prénom" />
+        android:hint="Prénom">
 
-    <EditText
-        android:id="@+id/etAge"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Âge -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Âge"
-        android:inputType="number" />
+        android:hint="Âge">
 
-    <EditText
-        android:id="@+id/etEmail"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:hint="Email">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Ajouter Étudiant Button -->
     <Button
         android:id="@+id/btnAddStudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="Ajouter Étudiant" />
 
 </LinearLayout>

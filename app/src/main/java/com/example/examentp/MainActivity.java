@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
             DB = new DatabaseHelper(this);
             Cursor students =DB.getAllEtudiant();
             ListView listViewStudents =  findViewById(R.id.listViewStudents);
-            String[] fromColumns = { "Nom", "Prenom", "Age", "Email" };
-            int[] toViews = { R.id.textViewName, R.id.textViewLast , R.id.textViewAge, R.id.textViewEmail};
+            String[] fromColumns = { "_id","Nom", "Prenom"};
+            int[] toViews = { R.id.textViewId, R.id.textViewName,R.id.textViewLast };
 
             SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.student_item, students, fromColumns, toViews, 0);
             listViewStudents.setAdapter(adapter);
